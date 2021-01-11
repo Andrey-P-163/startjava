@@ -24,7 +24,7 @@ public class Calculator{
             System.out.println(numberOne + " " + symbol + " " + numberTwo + " = " + resultInt);
         
         } else if (symbol == '/') {
-            resultDouble = (double) numberOne / numberTwo;
+            resultDouble = (double) numberOne / numberTwo;                                          //Решения проблемы с выводом результат деления не придумал. Данный способ нашел в гугле.
             System.out.println(numberOne + " " + symbol + " " + numberTwo + " = " + resultDouble);
         
         } else if (symbol == '^') {
