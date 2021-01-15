@@ -1,15 +1,14 @@
 public class MyFirstGame {
     public static void main(String[] agre) {
-        int numberPC = 0;
-        boolean victory = false;
-        while (!victory) {
+        int randomNum = 0;
+        while (true) {
             int numberPlayer = 0;
-            if (numberPlayer == numberPC) {
-                victory = true;
+            if (numberPlayer == randomNum) {
                 System.out.println("Вы победили");
-            } else if (numberPlayer > numberPC) {
+                break;
+            } else if (numberPlayer > randomNum) {
                 System.out.println("Введенное вами число больше того, что загадал компьютер");
-            } else if (numberPlayer < numberPC) {
+            } else if (numberPlayer < randomNum) {
                 System.out.println("Введенное вами число меньше того, что загадал компьютер");
             }
         }
