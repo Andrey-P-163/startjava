@@ -1,24 +1,20 @@
-public class Variable{
-    public static void main(String[] agre){
-        byte myByte = 4;
-        short myShort = 4000;
-        int myInt = 2807;
-        long myLong = 6900;
-
-        float myFloat = 3.10f;
-        double myDouble = 2.9;
-
-        char myChar = 'i';
-
-        boolean myBoolean = true;
-
-        System.out.println(myByte);
-        System.out.println(myShort);
-        System.out.println(myInt);
-        System.out.println(myLong);
-        System.out.println(myFloat);
-        System.out.println(myDouble);
-        System.out.println(myChar);
-        System.out.println(myBoolean);
+public class Variable {
+    public static void main(String[] agre) {
+        byte cores = 4;
+        System.out.println(cores);
+        short ram = 4000;
+        System.out.println(ram);
+        int graphicsMemory = 2807;
+        System.out.println(graphicsMemory);
+        long videoCardModel = 6900;
+        System.out.println(videoCardModel);
+        float cpuFrequency1 = 3.10f;
+        System.out.println(cpuFrequency1);
+        double cpuFrequency2 = 2.9;
+        System.out.println(cpuFrequency2);
+        char processor = 'i';
+        System.out.println(processor);
+        boolean goodPC = false;
+        System.out.println(goodPC);
     }
 }
