@@ -5,7 +5,7 @@ public class Wolf {
     private int age;
     private String color;
 
-     public String getGender() {
+    public String getGender() {
         return gender;
     }
 
@@ -37,7 +37,7 @@ public class Wolf {
         if (age > 8) {
             System.out.println("Некорректный возраст");
         } else {
-        this.age = age;
+            this.age = age;
         }
     }
 

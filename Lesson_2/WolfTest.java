@@ -8,8 +8,8 @@ public class WolfTest {
         wolfOne.setWeight(50.5);
         System.out.println(wolfOne.getWeight());
         wolfOne.setAge(20);
-        if (wolfOne.getAge() != 0){
-        System.out.println(wolfOne.getAge());
+        if (wolfOne.getAge() != 0) {
+            System.out.println(wolfOne.getAge());
         }
         wolfOne.setColor("Grey");
         System.out.println(wolfOne.getColor());
