@@ -21,12 +21,12 @@ public class CalculatorTest{
             System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + calculator.getResult());
             System.out.print("Хотите продолжить вычисления? [да/нет]: ");
 
-            int count = 0;
+            boolean count = false;
             while (true) {
                 Scanner repeatInput = new Scanner(System.in);
                 String inputSolution = repeatInput.nextLine();
                 if (inputSolution.equals("Нет")) {
-                    count = 1;
+                    count = true;
                     break;
                 } else if (inputSolution.equals("Да")) {
                     break;
@@ -34,7 +34,7 @@ public class CalculatorTest{
                     System.out.print("Хотите продолжить вычисления? [да/нет]: ");
                 }
             }
-            if (count == 1) {
+            if (count == true) {
                 break;
             }
         }
