@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class CalculatorTest{
+public class CalculatorTest {
     public static void main(String[] agre) {
         Calculator calculator = new Calculator();
         Scanner dataInput = new Scanner(System.in);
-
-        while (true) {
+        String inputSolution;
+        do {
             System.out.print("Введите первое число: ");
             int numberOne = dataInput.nextInt();
             calculator.setNumberOne(numberOne);
@@ -18,25 +18,13 @@ public class CalculatorTest{
             int numberTwo = dataInput.nextInt();
             calculator.setNumberTwo(numberTwo);
 
-            System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + calculator.getResult());
-            System.out.print("Хотите продолжить вычисления? [да/нет]: ");
+            System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + calculator.calculate());
 
-            boolean count = false;
-            while (true) {
+            do {
+                System.out.print("Хотите продолжить вычисления? [да/нет]: ");
                 Scanner repeatInput = new Scanner(System.in);
-                String inputSolution = repeatInput.nextLine();
-                if (inputSolution.equals("Нет")) {
-                    count = true;
-                    break;
-                } else if (inputSolution.equals("Да")) {
-                    break;
-                } else {
-                    System.out.print("Хотите продолжить вычисления? [да/нет]: ");
-                }
-            }
-            if (count == true) {
-                break;
-            }
-        }
+                inputSolution = repeatInput.nextLine();
+            } while (!inputSolution.equals("да") && (!inputSolution.equals("нет")));
+        } while (!inputSolution.equals("нет"));
     }
 }
