@@ -35,11 +35,11 @@ public class Calculator {
                     break;
                 case '^':
                     result = 1;
-                for (int i = 1; i <= numberTwo; i++) {
-                    result *= numberOne;
-                }
-                break;
+                        for (int i = 1; i <= numberTwo; i++) {
+                            result *= numberOne;
+                        }
+                    break;
             }
-        return result;
+            return result;
     }
 }
