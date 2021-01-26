@@ -2,29 +2,25 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] agre) {
-        Calculator calculator = new Calculator();
-        Scanner dataInput = new Scanner(System.in);
-        String inputSolution;
+        Calculator calc = new Calculator();
+        Scanner scan = new Scanner(System.in);
+        String userResponse;
         do {
             System.out.print("Введите первое число: ");
-            int numberOne = dataInput.nextInt();
-            calculator.setNumberOne(numberOne);
+            calc.setNumberOne(scan.nextInt());
 
             System.out.print("Введите знак математической операции: ");
-            char mathSign = dataInput.next().charAt(0);
-            calculator.setMathSign(mathSign);
+            calc.setMathSign(scan.next().charAt(0));
 
             System.out.print("Введите второе число: ");
-            int numberTwo = dataInput.nextInt();
-            calculator.setNumberTwo(numberTwo);
+            calc.setNumberTwo(scan.nextInt());
 
-            System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + calculator.calculate());
+            System.out.println(calc.getNumberOne() + " " + calc.getMathSign() + " " + calc.getNumberTwo() + " = " + calc.calculate());
 
             do {
                 System.out.print("Хотите продолжить вычисления? [да/нет]: ");
-                Scanner repeatInput = new Scanner(System.in);
-                inputSolution = repeatInput.nextLine();
-            } while (!inputSolution.equals("да") && (!inputSolution.equals("нет")));
-        } while (!inputSolution.equals("нет"));
+                userResponse = scan.nextLine();
+            } while (!userResponse.equals("да") && (!userResponse.equals("нет")));
+        } while (!userResponse.equals("нет"));
     }
 }
