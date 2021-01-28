@@ -8,7 +8,7 @@ public class Calculator {
         this.numberOne = numberOne;
     }
 
-    public int getNumberOne(){
+    public int getNumberOne() {
         return numberOne;
     }
 
@@ -16,7 +16,7 @@ public class Calculator {
         this.numberTwo = numberTwo;
     }
 
-    public int getNumberTwo(){
+    public int getNumberTwo() {
         return numberTwo;
     }
 
@@ -24,7 +24,7 @@ public class Calculator {
         this.mathSign = mathSign;
     }
 
-    public char getMathSign(){
+    public char getMathSign() {
         return mathSign;
     }
 
