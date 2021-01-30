@@ -15,6 +15,6 @@ public class GuessNumberTest {
                 System.out.print("Хотите повторить игру? [да/нет]: ");
                 repeat = inPutData.nextLine();
             } while (!repeat.equals("да") && (!repeat.equals("нет")));
-        } while(!repeat.equals("нет"));
+        } while (!repeat.equals("нет"));
     }
 }

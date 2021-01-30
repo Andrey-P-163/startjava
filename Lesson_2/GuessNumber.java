@@ -33,12 +33,10 @@ public class GuessNumber {
                 System.out.println(playerTwo.getName() + ", Вы победили!");
                 break;
             }
-        }while (playerOne.getNumber() != randomNumber && playerTwo.getNumber() != randomNumber);
+        } while (playerOne.getNumber() != randomNumber && playerTwo.getNumber() != randomNumber);
     }
 
     public void guessNumber() {
         gameLogic();
     }
 }
-
-
