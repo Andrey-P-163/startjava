@@ -6,53 +6,45 @@ public class Calculator {
     private double result;
     private char mathSign;
 
-    public void setNumberOne(int numberOne) {
-        this.numberOne = numberOne;
+    public void setExpression(String expression) {
+        String[] partExp = expression.split(" ");
+        this.numberOne = Integer.parseInt(partExp[0]);
+        this.mathSign = partExp[1].charAt(0);
+        this.numberTwo = Integer.parseInt(partExp[2]);
     }
 
-    public int getNumberOne() {
-        return numberOne;
-    }
-
-    public void setNumberTwo(int numberTwo) {
-        this.numberTwo = numberTwo;
-    }
-
-    public int getNumberTwo() {
-        return numberTwo;
-    }
-
-    public void setMathSign(char mathSign) {
-        this.mathSign = mathSign;
-    }
-
-    public char getMathSign() {
-        return mathSign;
-    }
-
-    public double calculate() {
-        switch(mathSign) {
+    public void calculate() {
+        switch (mathSign) {
             case '+':
-                result = numberOne + numberTwo;
+                result = Math.addExact(numberOne, numberTwo);
+                printResult();
                 break;
             case '-':
-                result = numberOne - numberTwo;
+                result = Math.subtractExact(numberOne, numberTwo);
+                printResult();
                 break;
             case '*':
-                result = numberOne * numberTwo;
+                result = Math.multiplyExact(numberOne, numberTwo);
+                printResult();
                 break;
             case '%':
-                result = numberOne % numberTwo;
+                result = Math.floorMod(numberOne, numberTwo);
+                printResult();
                 break;
             case '/':
                 result = (double) numberOne / numberTwo;
+                printResult();
                 break;
             case '^':
-                result = 1;
-                for (int i = 1; i <= numberTwo; i++) {
-                    result *= numberOne;
-                }
+                result = Math.pow(numberOne, numberTwo);
+                printResult();
+                break;
+            default:
+                System.out.println("Работа с этим арифмитическим действием в разработке. Приходите позже.");
         }
-        return result;
+    }
+
+    private void printResult() {
+        System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + result);
     }
 }

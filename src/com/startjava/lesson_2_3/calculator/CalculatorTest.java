@@ -8,16 +8,9 @@ public class CalculatorTest {
         Scanner scan = new Scanner(System.in);
         String userResponse;
         do {
-            System.out.print("Введите первое число: ");
-            calc.setNumberOne(scan.nextInt());
-
-            System.out.print("Введите знак математической операции: ");
-            calc.setMathSign(scan.next().charAt(0));
-
-            System.out.print("Введите второе число: ");
-            calc.setNumberTwo(scan.nextInt());
-
-            System.out.println(calc.getNumberOne() + " " + calc.getMathSign() + " " + calc.getNumberTwo() + " = " + calc.calculate());
+            System.out.print("Введите математическое выражение: ");
+            calc.setExpression(scan.nextLine());
+            calc.calculate();
 
             do {
                 System.out.print("Хотите продолжить вычисления? [да/нет]: ");
