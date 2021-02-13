@@ -12,6 +12,12 @@ public class CalculatorTest {
             calc.setExpression(scan.nextLine());
             calc.calculate();
 
+            if (calc.getCount() == 0) {
+                System.out.println(calc.getNumberOne() + " " + calc.getMathSign() + " " + calc.getNumberTwo() + " = " + calc.getResult());
+            } else {
+                System.out.println("Работа с этим арифмитическим действием в разработке. Приходите позже.");
+            }
+
             do {
                 System.out.print("Хотите продолжить вычисления? [да/нет]: ");
                 userResponse = scan.nextLine();

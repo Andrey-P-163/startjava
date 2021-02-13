@@ -5,6 +5,27 @@ public class Calculator {
     private int numberTwo;
     private double result;
     private char mathSign;
+    private int count;
+
+    public int getNumberOne() {
+        return numberOne;
+    }
+
+    public int getNumberTwo() {
+        return numberTwo;
+    }
+
+    public char getMathSign() {
+        return mathSign;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public double getResult() {
+        return result;
+    }
 
     public void setExpression(String expression) {
         String[] partExp = expression.split(" ");
@@ -17,34 +38,26 @@ public class Calculator {
         switch (mathSign) {
             case '+':
                 result = Math.addExact(numberOne, numberTwo);
-                printResult();
                 break;
             case '-':
                 result = Math.subtractExact(numberOne, numberTwo);
-                printResult();
                 break;
             case '*':
                 result = Math.multiplyExact(numberOne, numberTwo);
-                printResult();
                 break;
             case '%':
                 result = Math.floorMod(numberOne, numberTwo);
-                printResult();
                 break;
             case '/':
                 result = (double) numberOne / numberTwo;
-                printResult();
                 break;
             case '^':
                 result = Math.pow(numberOne, numberTwo);
-                printResult();
                 break;
             default:
-                System.out.println("Работа с этим арифмитическим действием в разработке. Приходите позже.");
+                count = 1;
         }
     }
-
-    private void printResult() {
-        System.out.println(numberOne + " " + mathSign + " " + numberTwo + " = " + result);
-    }
 }
+
+
