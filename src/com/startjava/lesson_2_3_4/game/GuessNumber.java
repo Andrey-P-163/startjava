@@ -72,7 +72,7 @@ public class GuessNumber {
         }
         System.out.println();
 
-        Arrays.fill(playerOne.getEnteredNumbers(), 0);
-        Arrays.fill(playerTwo.getEnteredNumbers(), 0);
+        Arrays.fill(playerOne.getEnteredNumbers(), 0, countPlayerOne,0);
+        Arrays.fill(playerTwo.getEnteredNumbers(), 0, countPlayerTwo,0);
     }
 }
