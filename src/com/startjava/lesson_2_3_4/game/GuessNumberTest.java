@@ -11,6 +11,7 @@ public class GuessNumberTest {
             Player playerOne = new Player(sc.nextLine());
             System.out.print("Введите имя второго игрока - ");
             Player playerTwo = new Player(sc.nextLine());
+            System.out.println("У Вас 10 попыток.");
             GuessNumber game = new GuessNumber(playerOne, playerTwo);
             game.run();
             do {

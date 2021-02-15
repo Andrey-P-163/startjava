@@ -3,6 +3,7 @@ package com.startjava.lesson_2_3_4.game;
 public class Player {
     private String name;
     private int number;
+    private int[] enteredNumbers = new int[10];
 
     public Player(String name) {
         this.name = name;
@@ -12,11 +13,16 @@ public class Player {
         return name;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(int number, int count) {
         this.number = number;
+        this.enteredNumbers[count] = number;
     }
 
     public int getNumber() {
         return number;
+    }
+
+    public int[] getEnteredNumbers() {
+        return enteredNumbers;
     }
 }
