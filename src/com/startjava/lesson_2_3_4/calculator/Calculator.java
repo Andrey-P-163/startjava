@@ -3,9 +3,7 @@ package com.startjava.lesson_2_3_4.calculator;
 public class Calculator {
     private int numberOne;
     private int numberTwo;
-    private double result;
     private char mathSign;
-    private int count;
 
     public int getNumberOne() {
         return numberOne;
@@ -19,14 +17,6 @@ public class Calculator {
         return mathSign;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public double getResult() {
-        return result;
-    }
-
     public void setExpression(String expression) {
         String[] partExp = expression.split(" ");
         this.numberOne = Integer.parseInt(partExp[0]);
@@ -34,30 +24,24 @@ public class Calculator {
         this.numberTwo = Integer.parseInt(partExp[2]);
     }
 
-    public void calculate() {
+    public double calculate() {
         switch (mathSign) {
             case '+':
-                result = Math.addExact(numberOne, numberTwo);
-                break;
+                return Math.addExact(numberOne, numberTwo);
             case '-':
-                result = Math.subtractExact(numberOne, numberTwo);
-                break;
+                return Math.subtractExact(numberOne, numberTwo);
             case '*':
-                result = Math.multiplyExact(numberOne, numberTwo);
-                break;
+                return Math.multiplyExact(numberOne, numberTwo);
             case '%':
-                result = Math.floorMod(numberOne, numberTwo);
-                break;
+                return Math.floorMod(numberOne, numberTwo);
             case '/':
-                result = (double) numberOne / numberTwo;
-                break;
+                return (double) numberOne / numberTwo;
             case '^':
-                result = Math.pow(numberOne, numberTwo);
-                break;
-            default:
-                count = 1;
+                return Math.pow(numberOne, numberTwo);
         }
+        return 0;
     }
 }
+
 
 
