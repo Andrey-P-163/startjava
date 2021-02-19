@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class GuessNumberTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String repeat;
         System.out.print("Введите имя первого игрока - ");
         Player playerOne = new Player(sc.nextLine());
         System.out.print("Введите имя второго игрока - ");
         Player playerTwo = new Player(sc.nextLine());
         System.out.println("У Вас 10 попыток.");
         GuessNumber game = new GuessNumber(playerOne, playerTwo);
+        String repeat;
 
         do {
             game.run();

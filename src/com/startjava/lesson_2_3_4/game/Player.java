@@ -15,12 +15,12 @@ public class Player {
         return name;
     }
 
-    public void setNumber(int number, int index) {
-        this.enteredNumbers[index] = number;
+    public void setEnteredNumbers(int number, int index) {
+        enteredNumbers[index] = number;
     }
 
     public int[] getEnteredNumbers() {
-        return Arrays.copyOf(enteredNumbers, 10);
+        return Arrays.copyOf(enteredNumbers, count);
     }
 
     public void setCount(int count) {
