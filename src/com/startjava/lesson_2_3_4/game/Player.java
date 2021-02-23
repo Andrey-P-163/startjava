@@ -15,19 +15,28 @@ public class Player {
         return name;
     }
 
-    public void setEnteredNumbers(int number, int index) {
-        enteredNumbers[index] = number;
-    }
-
-    public int[] getEnteredNumbers() {
-        return Arrays.copyOf(enteredNumbers, count);
+    public int getCount() {
+        return count;
     }
 
     public void setCount(int count) {
         this.count = count;
     }
 
-    public int getCount() {
-        return count;
+    public int[] getEnteredNumber() {
+        return Arrays.copyOf(enteredNumbers, count);
+    }
+
+    public void setEnteredNumber(int number) {
+        enteredNumbers[count - 1] = number;
+    }
+
+    public int getLastNumber() {
+        return enteredNumbers[count - 1];
+    }
+
+    public void clearData() {
+        Arrays.fill(enteredNumbers, 0, count, 0);
+        count = 0;
     }
 }
