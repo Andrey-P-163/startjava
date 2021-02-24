@@ -23,7 +23,7 @@ public class Player {
         this.count = count;
     }
 
-    public int[] getEnteredNumber() {
+    public int[] getEnteredNumbers() {
         return Arrays.copyOf(enteredNumbers, count);
     }
 
@@ -35,7 +35,7 @@ public class Player {
         return enteredNumbers[count - 1];
     }
 
-    public void clearData() {
+    public void clearNumbers() {
         Arrays.fill(enteredNumbers, 0, count, 0);
         count = 0;
     }
