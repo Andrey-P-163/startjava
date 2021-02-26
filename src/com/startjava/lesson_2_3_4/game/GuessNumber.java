@@ -44,16 +44,14 @@ public class GuessNumber {
     }
 
     private boolean checkNumber(Player player) {
-        if (player.getCount() <= 10) {
-            String compareNumbers = (player.getLastNumber() > randomNumber ? ", введенное вами число больше того, что загадал компьютер" : ", введенное вами число меньше того, что загадал компьютер");
-            if (player.getLastNumber() != randomNumber) {
-                System.out.println(player.getName() + compareNumbers);
-            } else {
-                System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " c " + player.getCount() + " попытки.");
-                return true;
-            }
+        if (player.getLastNumber() == randomNumber) {
+            System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " c " + player.getCount() + " попытки.");
+            return true;
         }
-        if (player.getCount() == 10) {
+        if (player.getCount() < 10) {
+            String compareNumbers = (player.getLastNumber() > randomNumber ? "больше" : "меньше");
+            System.out.println(player.getName() + " введенное вами число " + compareNumbers + " того, что загадал компьютер");
+        } else {
             System.out.println("У " + player.getName() + " закончились попытки");
         }
         return false;
